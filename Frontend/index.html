@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Moochi - Stream Movies & TV Shows</title>
+  <meta name="description" content="Stream the latest movies, TV shows, anime and more on Moochi">
+  <link rel="stylesheet" href="/assets/css/base.css">
+  <link rel="stylesheet" href="/assets/css/themes.css">
+  <link rel="stylesheet" href="/assets/css/layout.css">
+  <link rel="stylesheet" href="/assets/css/components.css">
+  <link rel="stylesheet" href="/assets/css/home.css">
+  <link rel="icon" href="/favicon.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- Sidebar Navigation -->
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-logo">
+      <a href="/" class="logo-link">
+        <img src="/assets/images/logo/logo.svg" alt="Moochi" class="logo-img" />
+      </a>
+    </div>
+
+    <nav class="sidebar-nav">
+      <a href="/" class="sidebar-item active" data-tooltip="Home">
+        <svg class="sidebar-icon" viewBox="0 0 24 24">
+          <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+          <polyline points="9 22 9 12 15 12 15 22" />
+        </svg>
+      </a>
+      <a href="/search.html" class="sidebar-item" data-tooltip="Search">
+        <svg class="sidebar-icon" viewBox="0 0 24 24">
+          <circle cx="11" cy="11" r="8" />
+          <line x1="21" y1="21" x2="16.65" y2="16.65" />
+        </svg>
+      </a>
+      <a href="/profile.html" class="sidebar-item" data-tooltip="Favorites">
+        <svg class="sidebar-icon" viewBox="0 0 24 24">
+          <path
+            d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+        </svg>
+      </a>
+    </nav>
+
+    <div class="sidebar-bottom">
+      <a href="/settings.html" class="sidebar-item" data-tooltip="Settings">
+        <svg class="sidebar-icon" viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="3" />
+          <path
+            d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z" />
+        </svg>
+      </a>
+    </div>
+  </aside>
+
+  <!-- Main Content Wrapper -->
+  <div class="main-content">
+
+    <!-- Header -->
+    <div id="header-container"></div>
+
+    <!-- Hero Section - Spotlight Style -->
+    <section id="hero" class="hero-spotlight">
+      <div class="hero-background">
+        <img id="hero-image" alt="" />
+        <div class="hero-gradient"></div>
+      </div>
+
+      <div class="hero-wrapper">
+        <div class="hero-content">
+          <!-- Spotlight Badge -->
+          <div class="spotlight-badge" id="spotlight-badge">
+            <svg class="spotlight-icon" viewBox="0 0 24 24" fill="currentColor" width="14" height="14">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+            </svg>
+            <span>#1 SPOTLIGHT</span>
+          </div>
+
+          <!-- Title -->
+          <div class="hero-title-wrapper">
+            <div class="hero-logo-container" id="hero-logo-container"></div>
+            <h1 id="hero-title" class="hero-title-text"></h1>
+          </div>
+
+          <!-- Description -->
+          <p id="hero-overview" class="hero-description"></p>
+
+          <!-- Metadata Tags -->
+          <div class="hero-meta" id="hero-meta">
+            <!-- Populated by JS -->
+          </div>
+
+          <!-- Action Buttons -->
+          <div class="hero-actions">
+            <button id="hero-play" class="btn-primary">
+              <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor" width="22" height="22">
+                <path d="M8 5v14l11-7z" />
+              </svg>
+              Watch Now
+            </button>
+            <button id="hero-info" class="btn-secondary" aria-label="Add to watchlist">
+              <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22"
+                height="22">
+                <path d="M12 5v14M5 12h14" />
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Preview Card (Right Side) -->
+        <div class="hero-preview" id="hero-preview">
+          <div class="preview-card">
+            <img id="preview-image" alt="" />
+            <div class="preview-info">
+              <!-- Populated by JS -->
+            </div>
+            <div class="preview-title" id="preview-title"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Slideshow Controls (Bottom Center) -->
+      <div class="hero-controls">
+        <button class="hero-nav-btn" id="hero-prev" aria-label="Previous slide">
+          <svg viewBox="0 0 24 24">
+            <polyline points="15 18 9 12 15 6" />
+          </svg>
+        </button>
+        <div class="hero-indicators" id="hero-indicators"></div>
+        <button class="hero-nav-btn" id="hero-next" aria-label="Next slide">
+          <svg viewBox="0 0 24 24">
+            <polyline points="9 18 15 12 9 6" />
+          </svg>
+        </button>
+      </div>
+    </section>
+
+    <!-- Content Sections -->
+    <main class="content-area">
+
+      <!-- Continue Watching (if user has watch history) -->
+      <section id="continue-watching-section" class="content-row hidden">
+        <div class="row-header">
+          <h2 class="row-title">
+            <svg class="row-title-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10" />
+              <polyline points="12 6 12 12 16 14" />
+            </svg>
+            Continue Watching
+          </h2>
+        </div>
+        <div class="row-list wide-cards" id="continue-watching"></div>
+      </section>
+
+      <!-- Latest Episodes -->
+      <section id="latest-episodes-section" class="content-row">
+        <div class="row-header">
+          <h2 class="row-title">
+            <svg class="row-title-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10" />
+              <polyline points="12 6 12 12 16 14" />
+            </svg>
+            Latest Episodes
+          </h2>
+          <div class="row-nav">
+            <button class="nav-arrow" data-dir="prev" aria-label="Previous">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="15 18 9 12 15 6" />
+              </svg>
+            </button>
+            <button class="nav-arrow" data-dir="next" aria-label="Next">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="9 18 15 12 9 6" />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="row-list episode-cards" id="latest-episodes"></div>
+      </section>
+
+      <!-- Trending Now - Featured Layout -->
+      <section id="trending-section" class="content-row trending-layout">
+        <div class="row-header">
+          <h2 class="row-title">
+            <svg class="row-title-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path
+                d="M8.5 14.5A2.5 2.5 0 0011 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 11-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 002.5 2.5z" />
+            </svg>
+            Trending Now
+          </h2>
+          <a href="/search.html?sort=trending" class="view-all">View All Collection</a>
+        </div>
+        <div class="trending-grid" id="trending-grid"></div>
+      </section>
+
+      <!-- Top 10 Section -->
+      <section id="top10-section" class="content-row">
+        <div class="row-header">
+          <h2 class="row-title">
+            <svg class="row-title-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M6 9H4.5a2.5 2.5 0 010-5C7 4 7 7 7 7" />
+              <path d="M18 9h1.5a2.5 2.5 0 000-5C17 4 17 7 17 7" />
+              <path d="M4 22h16" />
+              <path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22" />
+              <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22" />
+              <path d="M18 2H6v7a6 6 0 0012 0V2z" />
+            </svg>
+            Top 10 Anime
+          </h2>
+          <div class="time-tabs">
+            <button class="time-tab active" data-period="day">Today</button>
+            <button class="time-tab" data-period="week">This Week</button>
+            <button class="time-tab" data-period="month">This Month</button>
+          </div>
+        </div>
+        <div class="top10-grid" id="top10-grid"></div>
+      </section>
+
+      <!-- Dynamic Content Rows (from API) -->
+      <section id="rows"></section>
+
+    </main>
+
+    <!-- Footer -->
+    <div id="footer-container"></div>
+
+  </div>
+
+  <!-- Mobile Bottom Navigation -->
+  <nav class="mobile-nav">
+    <a href="/" class="mobile-nav__item active">
+      <svg class="mobile-nav__icon" viewBox="0 0 24 24">
+        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+        <polyline points="9 22 9 12 15 12 15 22" />
+      </svg>
+      <span>Home</span>
+    </a>
+    <a href="/search.html" class="mobile-nav__item">
+      <svg class="mobile-nav__icon" viewBox="0 0 24 24">
+        <circle cx="11" cy="11" r="8" />
+        <line x1="21" y1="21" x2="16.65" y2="16.65" />
+      </svg>
+      <span>Search</span>
+    </a>
+    <a href="/profile.html" class="mobile-nav__item">
+      <svg class="mobile-nav__icon" viewBox="0 0 24 24">
+        <path
+          d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+      </svg>
+      <span>Favorites</span>
+    </a>
+    <a href="/settings.html" class="mobile-nav__item">
+      <svg class="mobile-nav__icon" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="3" />
+        <path
+          d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z" />
+      </svg>
+      <span>Settings</span>
+    </a>
+  </nav>
+
+  <script type="module" src="/js/pages/home.page.js"></script>
+
+</body>
+
+</html>

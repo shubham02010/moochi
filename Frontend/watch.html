@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Watch - Moochi</title>
+    <link rel="stylesheet" href="/assets/css/base.css">
+    <link rel="stylesheet" href="/assets/css/themes.css">
+    <link rel="stylesheet" href="/assets/css/layout.css">
+    <link rel="stylesheet" href="/assets/css/components.css">
+    <link rel="stylesheet" href="/assets/css/home.css">
+    <link rel="stylesheet" href="/assets/css/watch.css">
+    <link rel="icon" href="/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Back Navigation -->
+    <header class="watch-header">
+        <a href="javascript:history.back()" class="back-btn">
+            <span class="material-symbols-outlined">arrow_back</span>
+            <span>Back</span>
+        </a>
+        <div class="watch-title" id="watch-title">
+            <span id="media-title"></span>
+            <span class="watch-views" id="watch-views"></span>
+        </div>
+    </header>
+
+    <!-- Main Layout -->
+    <main class="watch-layout">
+
+        <!-- Player Section -->
+        <div class="watch-player-section">
+
+            <!-- Video Player -->
+            <div class="watch-player-wrapper">
+                <div class="watch-player" id="watch-player">
+                    <div class="watch-player__loading" id="player-loading">
+                        <div class="watch-player__spinner"></div>
+                        <p id="loading-text">Loading...</p>
+                    </div>
+                    <iframe id="video-iframe" allowfullscreen allow="autoplay; fullscreen; picture-in-picture"></iframe>
+                </div>
+            </div>
+
+            <!-- Player Controls Bar -->
+            <div class="watch-controls">
+                <div class="watch-controls__left">
+                    <button class="control-btn" id="prev-btn" disabled>
+                        <span class="material-symbols-outlined">skip_previous</span>
+                    </button>
+                    <button class="control-btn" id="next-btn" disabled>
+                        <span class="material-symbols-outlined">skip_next</span>
+                    </button>
+                </div>
+                <div class="watch-controls__center">
+                    <span id="episode-label"></span>
+                </div>
+                <div class="watch-controls__right">
+                    <button class="nav-btn" id="prev-ep-btn" disabled>
+                        <span class="material-symbols-outlined">chevron_left</span>
+                        Prev
+                    </button>
+                    <button class="nav-btn nav-btn--primary" id="next-ep-btn" disabled>
+                        Next
+                        <span class="material-symbols-outlined">chevron_right</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Audio & Server Selection -->
+            <div class="watch-options">
+                <div class="watch-options__group">
+                    <span class="watch-options__label">
+                        <span class="material-symbols-outlined">volume_up</span>
+                        Audio
+                    </span>
+                    <div class="watch-options__buttons" id="audio-options">
+                        <button class="option-btn option-btn--active" data-audio="sub">
+                            <span class="material-symbols-outlined">subtitles</span>
+                            Sub
+                        </button>
+                        <button class="option-btn" data-audio="dub">
+                            <span class="material-symbols-outlined">record_voice_over</span>
+                            Dub
+                        </button>
+                    </div>
+                </div>
+
+                <div class="watch-options__group">
+                    <span class="watch-options__label">
+                        <span class="material-symbols-outlined">dns</span>
+                        Server
+                    </span>
+                    <div class="watch-options__buttons" id="server-options">
+                        <!-- Servers populated by JS -->
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Episodes Sidebar (for series only) -->
+        <aside class="watch-sidebar" id="watch-sidebar">
+            <div class="watch-sidebar__header">
+                <span class="material-symbols-outlined">playlist_play</span>
+                <span>Episodes</span>
+                <span class="episode-count" id="episode-count"></span>
+            </div>
+            <div class="watch-sidebar__list" id="episode-list">
+                <!-- Episodes populated by JS -->
+            </div>
+        </aside>
+
+    </main>
+
+    <script type="module" src="/js/pages/watch.page.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,86 @@
+:root {
+  /* Dark Burgundy Cinema Theme - Matching Reference Images */
+  --bg-main: #0d0208;
+  --bg-surface: #120510;
+  --bg-card: #1a0a14;
+  --bg-elevated: #241018;
+  --bg-hover: #2e141e;
+
+  --text-main: #ffffff;
+  --text-secondary: #f5f0f2;
+  --text-muted: #b8a8b0;
+  --text-dim: #7a6570;
+
+  /* Pink/Magenta Accent - From Reference Images */
+  --accent-main: #ff2d55;
+  --accent-hover: #ff4d6d;
+  --accent-light: #ff7a8f;
+  --accent-soft: rgba(255, 45, 85, 0.15);
+  --accent-glow: rgba(255, 45, 85, 0.7);
+  
+  --secondary-accent: #ff6b9d;
+  --tertiary-accent: #c850c0;
+
+  /* Status Colors */
+  --good: #22c55e;
+  --warn: #eab308;
+  --bad: #ef4444;
+  
+  /* Borders */
+  --border: rgba(255, 255, 255, 0.06);
+  --border-light: rgba(255, 255, 255, 0.1);
+  --border-hover: rgba(255, 45, 85, 0.5);
+  --border-card: rgba(255, 255, 255, 0.08);
+  
+  /* Shadows */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.6);
+  --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.7);
+  --shadow-lg: 0 12px 40px rgba(0, 0, 0, 0.8);
+  --shadow-glow: 0 0 30px rgba(255, 45, 85, 0.5);
+  --shadow-glow-strong: 0 0 50px rgba(255, 45, 85, 0.7);
+  
+  /* Skeleton Loading */
+  --skeleton-base: #1a0a14;
+  --skeleton-shimmer: #2a1420;
+
+  /* Card specific */
+  --card-radius: 16px;
+  --card-radius-lg: 20px;
+}
+
+[data-theme="dark"] {
+  /* Default dark theme - same as root */
+  --bg-main: #0d0208;
+  --bg-surface: #120510;
+  --bg-card: #1a0a14;
+  --bg-elevated: #241018;
+  --text-main: #ffffff;
+  --text-secondary: #f5f0f2;
+  --text-muted: #b8a8b0;
+  --accent-main: #ff2d55;
+  --accent-hover: #ff4d6d;
+  --accent-soft: rgba(255, 45, 85, 0.15);
+  --accent-glow: rgba(255, 45, 85, 0.7);
+}
+
+[data-theme="ice"] {
+  --bg-main: #f0f4ff;
+  --bg-surface: #ffffff;
+  --bg-card: #e8edff;
+  --bg-elevated: #dce4ff;
+  --text-main: #0a0e27;
+  --text-secondary: #1e293b;
+  --text-muted: #64748b;
+  --text-dim: #94a3b8;
+  --accent-main: #6366f1;
+  --accent-hover: #4f46e5;
+}
+
+[data-theme="rose"] {
+  --bg-main: #fff5f7;
+  --bg-surface: #ffffff;
+  --bg-card: #ffe4ea;
+  --text-main: #1f0a12;
+  --text-muted: #6b2737;
+  --accent-main: #ff4d6d;
+}

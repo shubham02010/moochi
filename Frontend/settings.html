@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Settings - Moochi</title>
+  <link rel="stylesheet" href="/assets/css/base.css">
+  <link rel="stylesheet" href="/assets/css/themes.css">
+  <link rel="stylesheet" href="/assets/css/layout.css">
+  <link rel="stylesheet" href="/assets/css/components.css">
+  <link rel="stylesheet" href="/assets/css/settings.css">
+  <link rel="icon" href="/favicon.ico">
+</head>
+<body>
+  <div id="header-container"></div>
+
+  <main class="settings-page">
+    <section class="settings-hero">
+      <h1>Settings</h1>
+      <p>Personalize Moochi with refined viewing, content, and player preferences. Your choices are saved instantly.</p>
+    </section>
+
+    <div class="settings-layout">
+      <nav class="settings-nav">
+        <a href="#theme">Theme</a>
+        <a href="#player">Player</a>
+        <a href="#content">Content</a>
+        <a href="#future">More</a>
+      </nav>
+
+      <div class="settings-section">
+        <section id="theme" class="settings-card">
+          <h2>Theme</h2>
+          <p>Choose the visual atmosphere that matches your mood.</p>
+          <div class="theme-grid">
+            <label class="theme-option">
+              <input type="radio" name="theme" value="dark" />
+              <span class="theme-option__swatch swatch-dark"></span>
+              <span class="theme-option__label">Dark</span>
+            </label>
+            <label class="theme-option">
+              <input type="radio" name="theme" value="ice" />
+              <span class="theme-option__swatch swatch-ice"></span>
+              <span class="theme-option__label">Light Blue</span>
+            </label>
+            <label class="theme-option">
+              <input type="radio" name="theme" value="rose" />
+              <span class="theme-option__swatch swatch-rose"></span>
+              <span class="theme-option__label">Pink-Red</span>
+            </label>
+          </div>
+        </section>
+
+        <section id="player" class="settings-card">
+          <h2>Player Preferences</h2>
+          <p>Control how the player opens and which server is prioritized.</p>
+
+          <div class="settings-control">
+            <div class="control-label">
+              <strong>Autoplay default server</strong>
+              <span>Automatically start playback when a default server is set.</span>
+            </div>
+            <label class="toggle">
+              <input type="checkbox" id="autoplay-toggle" />
+              <span class="toggle-track"></span>
+            </label>
+          </div>
+
+          <div class="settings-control">
+            <div class="control-label">
+              <strong>Default server</strong>
+              <span>Choose which provider should be preferred when autoplay is on.</span>
+            </div>
+            <select id="default-server" class="settings-select">
+              <option value="">Loading servers...</option>
+            </select>
+          </div>
+
+          <p id="default-server-status"></p>
+        </section>
+
+        <section id="content" class="settings-card">
+          <h2>Content Preferences</h2>
+          <p>Set the default focus for browsing and search.</p>
+          <div class="settings-row">
+            <label class="settings-control">
+              <div class="control-label">
+                <strong>All content</strong>
+                <span>Mix movies and series in search results.</span>
+              </div>
+              <input type="radio" name="content-preference" value="all" />
+            </label>
+            <label class="settings-control">
+              <div class="control-label">
+                <strong>Movies only</strong>
+                <span>Focus on films when browsing and searching.</span>
+              </div>
+              <input type="radio" name="content-preference" value="movie" />
+            </label>
+            <label class="settings-control">
+              <div class="control-label">
+                <strong>Series only</strong>
+                <span>Prioritize TV content by default.</span>
+              </div>
+              <input type="radio" name="content-preference" value="tv" />
+            </label>
+          </div>
+        </section>
+
+        <section id="future" class="settings-card">
+          <h2>More Settings</h2>
+          <div class="settings-placeholder">
+            <span>• Playback quality controls (coming soon)</span>
+            <span>• Accessibility enhancements (coming soon)</span>
+            <span>• Notifications & reminders (coming soon)</span>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <div id="footer-container"></div>
+
+  <script type="module" src="/js/pages/settings.page.js"></script>
+</body>
+</html>

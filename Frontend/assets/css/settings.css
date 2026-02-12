@@ -1,0 +1,249 @@
+/* ===== SETTINGS PAGE ===== */
+.settings-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 120px 24px 80px;
+  display: grid;
+  gap: 32px;
+}
+
+.settings-hero {
+  border-radius: 28px;
+  padding: 36px;
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.9), rgba(2, 6, 23, 0.95));
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-md);
+}
+
+.settings-hero h1 {
+  font-size: clamp(2rem, 3vw, 2.8rem);
+  margin-bottom: 12px;
+}
+
+.settings-hero p {
+  color: var(--text-muted);
+  max-width: 620px;
+  line-height: 1.6;
+}
+
+.settings-layout {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 32px;
+}
+
+.settings-nav {
+  position: sticky;
+  top: 96px;
+  align-self: start;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.settings-nav a {
+  padding: 12px 16px;
+  border-radius: 14px;
+  text-decoration: none;
+  color: var(--text-muted);
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.settings-nav a:hover {
+  color: var(--text-main);
+  border-color: var(--border-hover);
+}
+
+.settings-section {
+  display: grid;
+  gap: 24px;
+}
+
+.settings-card {
+  padding: 28px;
+  border-radius: 22px;
+  background: rgba(15, 23, 42, 0.75);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+  display: grid;
+  gap: 16px;
+}
+
+.settings-card h2 {
+  font-size: 1.35rem;
+}
+
+.settings-card p {
+  color: var(--text-muted);
+}
+
+.settings-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.theme-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 16px;
+}
+
+.theme-option {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 16px;
+  border-radius: 18px;
+  border: 1px solid transparent;
+  background: rgba(11, 15, 25, 0.7);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.theme-option input {
+  display: none;
+}
+
+.theme-option__swatch {
+  height: 90px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.theme-option__label {
+  font-weight: 600;
+}
+
+.theme-option input:checked + .theme-option__swatch {
+  box-shadow: 0 0 0 2px var(--accent-main);
+}
+
+.swatch-dark {
+  background: linear-gradient(135deg, #0b0e14, #0f172a);
+}
+
+.swatch-ice {
+  background: linear-gradient(135deg, #dbeafe, #bfdbfe);
+}
+
+.swatch-rose {
+  background: linear-gradient(135deg, #ff758f, #ff4d6d);
+}
+
+.settings-control {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px;
+  border-radius: 16px;
+  background: rgba(9, 12, 20, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.settings-control input[type="radio"] {
+  accent-color: var(--accent-main);
+  width: 18px;
+  height: 18px;
+}
+
+.control-label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.control-label span {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+.toggle {
+  width: 48px;
+  height: 28px;
+  border-radius: 999px;
+  position: relative;
+  cursor: pointer;
+}
+
+.toggle input {
+  display: none;
+}
+
+.toggle input:checked + .toggle-track {
+  background: var(--accent-main);
+}
+
+.toggle input:checked + .toggle-track::after {
+  transform: translateX(20px);
+}
+
+.toggle-track {
+  position: absolute;
+  inset: 0;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.15);
+  transition: background 0.2s ease;
+}
+
+.toggle-track::after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: white;
+  transition: transform 0.2s ease;
+}
+
+.settings-select,
+.settings-input {
+  width: min(320px, 100%);
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(10, 15, 25, 0.7);
+  color: var(--text-main);
+}
+
+#default-server-status {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.settings-placeholder {
+  display: grid;
+  gap: 12px;
+  color: var(--text-muted);
+}
+
+.settings-placeholder span {
+  font-size: 0.85rem;
+}
+
+@media (max-width: 900px) {
+  .settings-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .settings-nav {
+    position: static;
+    flex-direction: row;
+    overflow-x: auto;
+  }
+
+  .settings-nav a {
+    flex: 0 0 auto;
+  }
+}
+
+@media (max-width: 640px) {
+  .settings-hero {
+    padding: 28px;
+  }
+}
